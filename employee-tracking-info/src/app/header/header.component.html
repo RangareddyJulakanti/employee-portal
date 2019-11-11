@@ -1,0 +1,13 @@
+<header>
+  <nav class="navbar navbar-expand-md  navbar-dark bg-dark">
+      <div><a routerLink="/" class="navbar-brand">EmployeeTrackingInfo</a></div>
+      <ul class="navbar-nav">
+          <li><a  routerLink="/home" class="nav-link">HOME</a></li>
+          <li><a  routerLink="/todos" class="nav-link">TODO-SO</a></li>
+      </ul>
+      <ul class="navbar-nav navbar-collapse justify-content-end ">
+          <li><a *ngIf="!empService.isUserLoggedIn()" routerLink="/login" class="nav-link">LOGIN</a></li>
+          <li><a  *ngIf="empService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LOGOUT</a></li>
+      </ul>
+  </nav>
+</header>
